@@ -35,8 +35,9 @@
         }
 
         header {
-            background-color: #13077A;
+            background-color: #120778;
             padding: 10px 10px;
+            position: absolute;
         }
 
         .nyttc-site-title {
@@ -70,19 +71,100 @@
             display: flex;
             color: #ffffff;
             list-style: none;
-            margin-left: 65px;
+            margin-left: 33px;
         }
 
         .nyttc-menu-item {
             margin-left: 5px;
-            margin-right: 5px;
-            font-size: 18px;
+            /* margin-right: 5px; */
+            font-size: 16px;
             font-weight: 600;
             color: #13077A;
             background-color: #44E8DF;
             padding: 2px 10px;
             border-top-right-radius: 20px;
             border-end-start-radius: 20px;
+        }
+
+        /* Style for the container */
+        .news-container {
+            position: absolute;
+            left: 638px;
+            top: 110px;
+            overflow: hidden;
+            white-space: nowrap;
+            background-color: #c00020;
+            width: 646px;
+            height: 30px;
+            border-left: 10px solid #c00020;
+            border-right: 10px solid #c00020;
+            border-radius: 3px;
+        }
+
+        .news-container:hover .news-text {
+            animation-play-state: paused;
+        }
+
+        /* Style for the scrolling text */
+        .news-text {
+            font-size: 18px;
+            font-weight: 500;
+            display: flex;
+            /* padding: 10px; */
+            animation: scrollText 40s linear infinite;
+            /* Adjust the speed by changing the duration (20s in this example) */
+        }
+
+        .news-text p {
+            margin-top: 13px;
+            margin-right: 50px;
+            line-height: 4px;
+        }
+
+        .news-text a {
+            text-decoration: none;
+            /* color: #13077A; */
+            color: #fff;
+            font-family: 'Roboto', serif;
+        }
+
+        /* Animation for scrolling text */
+        @keyframes scrollText {
+            from {
+                transform: translateX(100%);
+            }
+
+            to {
+                transform: translateX(-250%);
+            }
+        }
+
+        .nyttc-bg-video {
+            width: 1350px;
+        }
+
+        .nyttc-dpt {
+            display: flex;
+        }
+
+        .nyttc-dpt a {
+            /* padding: 5px 10px; */
+            border-radius: 5px;
+            text-decoration: none;
+            color: #44E8DF;
+            font-weight: 500;
+            font-size: 20px;
+            font-family: 'Roboto', serif;
+        }
+
+        .nyttc-dpt-box {
+            width: 300px;
+            height: auto;
+            background-color: #13077A;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
         }
     </style>
 </head>
@@ -110,18 +192,54 @@
                                 <li class="nyttc-menu-item">About</li>
                                 <li class="nyttc-menu-item">Result</li>
                                 <li class="nyttc-menu-item">Notice</li>
+                                <li class="nyttc-menu-item">Resources</li>
                             </ul>
                         </div>
                     </div>
-
                 </div>
             </div>
-
+            <!-- Container for the scrolling text -->
+            <div class="news-container">
+                <!-- Scrolling text with multiple headlines -->
+                <div class="news-text">
+                    <a href="#">
+                        <p>Headline 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </a>
+                    <a href="#">
+                        <p>Headline 2: Integer vel erat vel enim varius tincidunt.</p>
+                    </a>
+                    <a href="#">
+                        <p>Headline 3: Proin vel erat vel enim varius tincidunt.</p>
+                    </a>
+                    <!-- Add more news items as needed -->
+                </div>
+            </div>
         </nav>
-
     </header>
 
     <main>
+        <!-- Top Banner Animated Background -->
+        <section class="nyttc-top-section">
+            <video autoplay loop muted class="nyttc-bg-video">
+                <source src="assets/video/video.mp4" type="video/mp4">
+            </video>
+        </section>
+
+        <!-- Course Section -->
+        <section class="nyttc-dpt d-flex justify-content-center">
+            <div class="nyttc-dpt-box m-2">
+                <a href="#">Soft Skill Department</a>
+            </div>
+            <div class="nyttc-dpt-box m-2">
+                <a href="#">Technical Department</a>
+            </div>
+            <div class="nyttc-dpt-box m-2">
+                <a href="#">Master Chef Department</a>
+            </div>
+            <div class="nyttc-dpt-box m-2">
+                <a href="#">Women Development Department</a>
+            </div>
+        </section>
 
     </main>
 
