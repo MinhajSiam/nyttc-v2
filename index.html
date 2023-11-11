@@ -165,6 +165,43 @@
             display: flex;
             align-items: center;
             justify-content: space-around;
+            border-radius: 5px;
+        }
+
+        .second-section {
+            margin-top: -7px;
+            background-color: #13077A;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .second-section-logo {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            position: relative;
+            width: 10%;
+            background-color: #ffffff;
+            padding: 5px 12px;
+            border-radius: 7px;
+        }
+
+        .course-section-title {
+            font-family: 'Roboto', serif;
+            color: #13077A;
+            font-weight: 700;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .second-section h1 {
+            font-family: 'Roboto', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #44E8DF;
+            position: relative;
+            top: -15px;
         }
     </style>
 </head>
@@ -225,19 +262,35 @@
             </video>
         </section>
 
+
+        <section>
+            <div class="second-section">
+                <img class="second-section-logo" src="assets/images/National Youth _ Technical Training Center-logo.png"
+                    alt="">
+            </div>
+            <div class="second-section pb-2">
+                <img class="mt-3" src="assets/images/জাতীয়-যুব-ও-কারিগরি-প্রশিক্ষণ-কেন্দ্র.png" alt="" width="50%">
+                <!-- <h1 class="mt-3">জাতীয়-যুব-ও-কারিগরি-প্রশিক্ষণ-কেন্দ্র</h1> -->
+                <h1 class="mt-3">NATIONAL YOUTH & TECHNICAL TRAINING CENTER</h1>
+            </div>
+        </section>
+
         <!-- Course Section -->
-        <section class="nyttc-dpt d-flex justify-content-center">
-            <div class="nyttc-dpt-box m-2">
-                <a href="#">Soft Skill Department</a>
-            </div>
-            <div class="nyttc-dpt-box m-2">
-                <a href="#">Technical Department</a>
-            </div>
-            <div class="nyttc-dpt-box m-2">
-                <a href="#">Master Chef Department</a>
-            </div>
-            <div class="nyttc-dpt-box m-2">
-                <a href="#">Women Development Department</a>
+        <section>
+            <h1 class="course-section-title">Our Popular Courses</h1>
+            <div class="nyttc-dpt d-flex justify-content-center">
+                <div class="nyttc-dpt-box m-2">
+                    <a href="#">Soft Skill Department</a>
+                </div>
+                <div class="nyttc-dpt-box m-2">
+                    <a href="#">Technical Department</a>
+                </div>
+                <div class="nyttc-dpt-box m-2">
+                    <a href="#">Master Chef Department</a>
+                </div>
+                <div class="nyttc-dpt-box m-2">
+                    <a href="#">Women Development Department</a>
+                </div>
             </div>
         </section>
 
