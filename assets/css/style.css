@@ -1,6 +1,9 @@
 .nyttc-navbar {
     display: flex;
     margin-left: 50px;
+    position: absolute;
+    background-color: #13077A;
+    z-index: 2;
 }
 
 .half-width-logo {
@@ -15,9 +18,11 @@
 }
 
 header {
+    height: 150px;
     background-color: #120778;
     padding: 10px 10px;
     position: relative;
+    z-index: 1;
 }
 
 .nyttc-site-title {
@@ -64,7 +69,8 @@ header {
     font-size: 16px;
     font-weight: 600;
     color: #13077A;
-    background-color: #44E8DF;
+    background-color: #fff;
+    /* background-color: #44E8DF; */
     padding: 2px 10px;
     border-top-right-radius: 20px;
     border-end-start-radius: 20px;
@@ -73,8 +79,8 @@ header {
 /* Style for the container */
 .news-container {
     position: absolute;
-    left: 638px;
-    top: 110px;
+    left: 577px;
+    top: 100px;
     overflow: hidden;
     white-space: nowrap;
     /* background-color: #c00020; */
@@ -93,6 +99,7 @@ header {
 .news-text {
     font-size: 22px;
     font-weight: 700;
+    text-transform: uppercase;
     display: flex;
     /* padding: 10px; */
     animation: scrollText 40s linear infinite;
@@ -109,7 +116,7 @@ header {
     text-decoration: none;
     /* color: #13077A; */
     /* color: #fff; */
-    color: orange;
+    color: #44E8DF;
     font-family: 'Roboto', serif;
 }
 
@@ -120,6 +127,6 @@ header {
     }
 
     to {
-        transform: translateX(-270%);
+        transform: translateX(-300%);
     }
 }
