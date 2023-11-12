@@ -4,65 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        /* Style for the container */
-        .news-container {
-            overflow: hidden;
-            white-space: nowrap;
-            overflow-y: scroll;
-            /* Force the vertical scrollbar to always appear */
-        }
 
-        /* Style for the scrolling text */
-        .news-text {
-            display: flex;
-            animation: scrollText 20s linear infinite;
-            /* Adjust the speed by changing the duration (20s in this example) */
-        }
-
-        /* Individual style for each headline link */
-        .news-text a {
-            text-decoration: none;
-            /* Remove the default underline */
-            color: #333;
-            /* Set the color for the link */
-            padding: 10px;
-            margin-right: 10px;
-            /* Add a 10px margin to the right of each headline */
-            display: block;
-            /* Make the entire link clickable */
-        }
-
-        /* Pause animation on hover */
-        .news-container:hover .news-text {
-            animation-play-state: paused;
-        }
-
-        /* Animation for scrolling text */
-        @keyframes scrollText {
-            from {
-                transform: translateX(100%);
-            }
-
-            to {
-                transform: translateX(-100%);
-            }
-        }
-    </style>
-    <title>Clickable News Ticker Example</title>
 </head>
 
 <body>
-    <!-- Container for the scrolling text -->
-    <div class="news-container">
-        <!-- Scrolling text with multiple clickable headlines -->
-        <div class="news-text">
-            <a href="link1.html">Headline 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
-            <a href="link2.html">Headline 2: Integer vel erat vel enim varius tincidunt.</a>
-            <a href="link3.html">Headline 3: Proin vel erat vel enim varius tincidunt.</a>
-            <!-- Add more news items as needed -->
-        </div>
-    </div>
+
 </body>
 
 </html>
+
+
+<!-- HTML !-->
+<button class="button-87" role="button">Button 87</button>
+
+/* CSS */
+.button-87 {
+margin: 10px;
+padding: 15px 30px;
+text-align: center;
+text-transform: uppercase;
+transition: 0.5s;
+background-size: 200% auto;
+color: white;
+border-radius: 10px;
+display: block;
+border: 0px;
+font-weight: 700;
+box-shadow: 0px 0px 14px -7px #f09819;
+background-image: linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
+cursor: pointer;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+}
+
+.button-87:hover {
+background-position: right center;
+/* change the direction of the change here */
+color: #fff;
+text-decoration: none;
+}
+
+.button-87:active {
+transform: scale(0.95);
+}
