@@ -30,8 +30,17 @@
         }
 
         .nyttc-course-dpt a {
+            font-size: 20px;
+            font-weight: 500;
             color: #44E8DF;
             background-color: #13077A;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 430px) {
+            .nyttc-course-dpt a {
+                font-size: 8px;
+            }
         }
 
         .w-25 {
@@ -222,12 +231,16 @@
         <section>
             <h1 class="course-section-title">Our Popular Courses</h1>
             <div class="container">
-                <div class="row nyttc-course-dpt d-flex justify-content-center">
-                    <a class="text-decoration-none text-center col-lg-3 m-3 p-2 w-25" href="#">Soft Skill Department</a>
-                    <a class="text-decoration-none text-center col-lg-3 m-3 p-2 w-25" href="#">Technical Department</a>
-                    <a class="text-decoration-none text-center col-lg-3 m-3 p-2 w-25" href="#">Master Chef
+                <div class="row nyttc-course-dpt">
+                    <a class="text-decoration-none text-center col-6 col-md-4 col-lg-3 m-3 p-2 w-25" href="#">Soft Skill
                         Department</a>
-                    <a class="text-decoration-none text-center col-lg-3 m-3 p-2 w-25" href="#">Women Development</a>
+                    <a class="text-decoration-none text-center col-6 col-md-4 col-lg-3 m-3 p-2 w-25" href="#">Technical
+                        Department</a>
+                    <a class="text-decoration-none text-center col-6 col-md-4 col-lg-3 m-3 p-2 w-25" href="#">Master
+                        Chef
+                        Department</a>
+                    <a class="text-decoration-none text-center col-6 col-md-4 col-lg-3 m-3 p-2 w-25" href="#">Women's
+                        Development</a>
                 </div>
             </div>
         </section>
