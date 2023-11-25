@@ -30,6 +30,95 @@
             /* top: -300px; */
         }
 
+        /* Course Department Start */
+
+        .nyttc-card-title {
+            color: #44E8DF;
+            font-size: 1.5em;
+            line-height: normal;
+            font-weight: 700;
+            margin-bottom: 0.5em;
+        }
+
+        .nyttc-small-desc {
+            font-size: 1em;
+            font-weight: 400;
+            line-height: 1.5em;
+            color: #452c2c;
+        }
+
+        .nyttc-small-desc {
+            font-size: 1em;
+        }
+
+        .nyttc-go-corner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            width: 2em;
+            height: 2em;
+            overflow: hidden;
+            top: 0;
+            right: 0;
+            background: linear-gradient(135deg, #5af0e8, #44E8DF);
+            border-radius: 0 4px 0 32px;
+        }
+
+        .nyttc-go-arrow {
+            margin-top: -4px;
+            margin-right: -4px;
+            color: white;
+            font-family: courier, sans;
+        }
+
+        .nyttc-card {
+            display: block;
+            position: relative;
+            max-width: 300px;
+            max-height: 320px;
+            background-color: #f2f8f9;
+            border-radius: 10px;
+            padding: 2em 1.2em;
+            margin: 12px;
+            text-decoration: none;
+            z-index: 0;
+            overflow: hidden;
+            background: linear-gradient(to bottom, #1d0bb7, #13077A);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .nyttc-card:before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            top: -16px;
+            right: -16px;
+            background: linear-gradient(135deg, #5af0e8, #44E8DF);
+            height: 32px;
+            width: 32px;
+            border-radius: 32px;
+            transform: scale(1);
+            transform-origin: 50% 50%;
+            transition: transform 0.35s ease-out;
+        }
+
+        .nyttc-card:hover:before {
+            transform: scale(28);
+        }
+
+        .nyttc-card:hover .nyttc-small-desc {
+            transition: all 0.5s ease-out;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .nyttc-card:hover .nyttc-card-title {
+            transition: all 0.5s ease-out;
+            color: #13077A;
+        }
+
+        /* Course Department End */
+
         .nyttc-course-dpt a {
             font-size: 20px;
             font-weight: 500;
@@ -185,7 +274,6 @@
         /* footer start */
 
 
-
         /* footer end */
     </style>
 </head>
@@ -262,7 +350,7 @@
         </section> -->
 
         <!-- Course Section Start-->
-        <section>
+        <!-- <section>
             <h1 class="course-section-title">Our Popular Courses</h1>
             <div class="container">
                 <div class="row nyttc-course-dpt">
@@ -277,7 +365,35 @@
                         Development</a>
                 </div>
             </div>
-        </section>
+        </section> -->
+
+
+        <div class="d-flex container justify-content-center">
+            <div id="soft-skill" class="nyttc-card">
+                <p class="nyttc-card-title">Soft Skill Department</p>
+                <div class="nyttc-go-corner">
+                    <div class="nyttc-go-arrow">→</div>
+                </div>
+            </div>
+            <div id="technical-skill" class="nyttc-card">
+                <p class="nyttc-card-title">Technical Skill Department</p>
+                <div class="nyttc-go-corner">
+                    <div class="nyttc-go-arrow">→</div>
+                </div>
+            </div>
+            <div id="Master-chef-skill" class="nyttc-card">
+                <p class="nyttc-card-title">Master Chef Department</p>
+                <div class="nyttc-go-corner">
+                    <div class="nyttc-go-arrow">→</div>
+                </div>
+            </div>
+            <div id="womens-development" class="nyttc-card">
+                <p class="nyttc-card-title">Women's Development</p>
+                <div class="nyttc-go-corner">
+                    <div class="nyttc-go-arrow">→</div>
+                </div>
+            </div>
+        </div>
         <!-- Course Section End-->
 
         <!-- Scrolling Course Section Start -->
