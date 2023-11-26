@@ -4,131 +4,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"> -->
     <title>Document</title>
     <style>
-        .nyttc-card-title {
-            color: #262626;
-            font-size: 1.5em;
-            line-height: normal;
-            font-weight: 700;
-            margin-bottom: 0.5em;
+        * {
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
         }
 
-        .nyttc-small-desc {
-            font-size: 1em;
-            font-weight: 400;
-            line-height: 1.5em;
-            color: #452c2c;
-        }
-
-        .nyttc-small-desc {
-            font-size: 1em;
-        }
-
-        .nyttc-go-corner {
+        body {
+            background-color: #deeeff;
             display: flex;
-            align-items: center;
             justify-content: center;
-            position: absolute;
-            width: 2em;
-            height: 2em;
-            overflow: hidden;
-            top: 0;
-            right: 0;
-            background: linear-gradient(135deg, #6293c8, #384c6c);
-            border-radius: 0 4px 0 32px;
+            align-items: center;
+            height: 100vh;
         }
 
-        .nyttc-go-arrow {
-            margin-top: -4px;
-            margin-right: -4px;
-            color: white;
-            font-family: courier, sans;
+        .container {
+            width: 50%;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, .1);
+            border-radius: 20px;
         }
 
-        .nyttc-card {
-            display: block;
+        .tab-box {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-bottom: 2px solid rgba(229, 229, 229);
             position: relative;
-            max-width: 300px;
-            max-height: 320px;
-            background-color: #f2f8f9;
-            border-radius: 10px;
-            padding: 2em 1.2em;
-            margin: 12px;
-            text-decoration: none;
-            z-index: 0;
-            overflow: hidden;
-            background: linear-gradient(to bottom, #c3e6ec, #a7d1d9);
-            font-family: Arial, Helvetica, sans-serif;
         }
 
-        .nyttc-card:before {
-            content: '';
+        .tab-box .tab-btn {
+            font-size: 18px;
+            font-weight: 600;
+            color: #919191;
+            background: none;
+            border: none;
+            padding: 18px;
+        }
+
+        .tab-box .tab-btn.active {
+            color: #7360ff;
+        }
+
+        .content-box {
+            padding: 20px;
+        }
+
+        .content-box .content {
+            display: none;
+            animation: moving 0.5s ease;
+        }
+
+        @keyframes moving {
+            from {
+                transform: translateX(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .content-box .content.active {
+            display: block;
+        }
+
+        .content-box .content h2 {
+            margin-bottom: 10px;
+        }
+
+        .line {
             position: absolute;
-            z-index: -1;
-            top: -16px;
-            right: -16px;
-            background: linear-gradient(135deg, #364a60, #384c6c);
-            height: 32px;
-            width: 32px;
-            border-radius: 32px;
-            transform: scale(1);
-            transform-origin: 50% 50%;
-            transition: transform 0.35s ease-out;
+            top: 62px;
+            left: 17px;
+            width: 90px;
+            height: 5px;
+            background-color: #7360ff;
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
         }
 
-        .nyttc-card:hover:before {
-            transform: scale(28);
-        }
+        /* tab option start */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-        .nyttc-card:hover .nyttc-small-desc {
-            transition: all 0.5s ease-out;
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        .nyttc-card:hover .nyttc-card-title {
-            transition: all 0.5s ease-out;
-            color: #ffffff;
-        }
+        /* tab option end */
     </style>
 </head>
 
 <body>
 
     <main>
-        <div class="nyttc-card">
-            <p class="nyttc-card-title">Product Name</p>
-            <p class="nyttc-small-desc">
-            <ul class="list-unstyled">
-                <li class="m-2">
-                    <div style="border-bottom: 2px solid #13077a;">
-                        <h6>PGD</h6>
-                    </div>
-                </li>
-                <li class="m-2">
-                    <div style="border-bottom: 2px solid #f0efef;">
-                        <h6>PGD</h6>
-                    </div>
-                </li>
-                <li class="m-2">
-                    <div style="border-bottom: 2px solid #f0efef;">
-                        <h6>PGD</h6>
-                    </div>
-                </li>
-
-            </ul>
-            </p>
-            <div class="nyttc-go-corner">
-                <div class="nyttc-go-arrow">→</div>
+        <div class="container">
+            <div class="tab-box">
+                <button class="tab-btn active">Home</button>
+                <button class="tab-btn">Home</button>
+                <button class="tab-btn">Home</button>
+                <button class="tab-btn">Home</button>
+                <div class="line"></div>
+            </div>
+            <div class="content-box">
+                <div class="content active">
+                    <h2>Home</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eaque corporis dolore totam
+                        doloribus ducimus maxime? Alias aperiam maiores sit?</p>
+                </div>
+                <div class="content">
+                    <h2>Home</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eaque corporis dolore totam
+                        doloribus ducimus maxime? Alias aperiam maiores sit?</p>
+                </div>
+                <div class="content">
+                    <h2>Home</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eaque corporis dolore totam
+                        doloribus ducimus maxime? Alias aperiam maiores sit?</p>
+                </div>
+                <div class="content">
+                    <h2>Home</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eaque corporis dolore totam
+                        doloribus ducimus maxime? Alias aperiam maiores sit?</p>
+                </div>
             </div>
         </div>
     </main>
 
 
+    <!-- script -->
+    <script>
+        const tabs = document.querySelectorAll(".tab-btn");
+        const all_content = document.querySelectorAll('.content');
 
+        tabs.forEach((tab, index) => {
+            tab.addEventListener("click", (e) => {
+                tabs.forEach(tab => { tab.classList.remove('active') });
+                tab.classList.add('active');
+
+                var line = document.querySelector('.line');
+                line.style.width = e.target.offsetWidth + "px";
+                line.style.left = e.target.offsetLeft + "px";
+
+                all_content.forEach(content => { content.classList.remove('active') });
+                all_content[index].classList.add('active');
+            })
+
+        })
+    </script>
     <!-- bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
 </body>
 
 </html>
