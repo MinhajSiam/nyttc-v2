@@ -11,9 +11,89 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
-        body {
-            margin: 0;
-            background-color: rgb(227, 227, 227);
+        .nyttc-card-title {
+            color: #fff;
+            font-size: 1.5em;
+            line-height: normal;
+            font-weight: 700;
+            margin-bottom: 0.5em;
+        }
+
+        .nyttc-go-corner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            width: 2em;
+            height: 2em;
+            overflow: hidden;
+            top: 0;
+            right: 0;
+            background: linear-gradient(135deg, #5af0e8, #44E8DF);
+            border-radius: 0 4px 0 32px;
+        }
+
+        .nyttc-go-arrow {
+            margin-top: -4px;
+            margin-right: -4px;
+            color: #13077A;
+            font-family: courier, sans;
+        }
+
+        .nyttc-card {
+            display: block;
+            position: relative;
+            max-width: 300px;
+            /* max-height: 320px; */
+            background-color: #f2f8f9;
+            border-radius: 7px;
+            padding: 2em 1.2em;
+            margin: 5px 5px;
+            text-decoration: none;
+            z-index: 0;
+            overflow: hidden;
+            background: linear-gradient(to bottom, #1d0bb7, #13077A);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .nyttc-small-desc {
+            font-size: 1em;
+            font-weight: 400;
+            line-height: 1.5em;
+            color: #452c2c;
+        }
+
+        .nyttc-small-desc {
+            font-size: 1em;
+        }
+
+        .nyttc-card:before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            top: -16px;
+            right: -16px;
+            background: linear-gradient(135deg, #5af0e8, #44E8DF);
+            height: 32px;
+            width: 32px;
+            border-radius: 32px;
+            transform: scale(1);
+            transform-origin: 50% 50%;
+            transition: transform 0.35s ease-out;
+        }
+
+        .nyttc-card:hover:before {
+            transform: scale(28);
+        }
+
+        .nyttc-card:hover .nyttc-small-desc {
+            transition: all 0.5s ease-out;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .nyttc-card:hover .nyttc-card-title {
+            transition: all 0.5s ease-out;
+            color: #13077A;
         }
     </style>
 </head>
@@ -70,7 +150,219 @@
         </nav>
     </header>
     <main>
-
+        <section>
+            <div class="d-flex justify-content-center row">
+                <div class="col-6 col-lg-3 nyttc-card">
+                    <div style="border-bottom: 1px dashed #44E8DF;" class="nyttc-card-title">
+                        <p>Computer Skill Department</p>
+                    </div>
+                    <p class="nyttc-small-desc">
+                    <ul class="list-unstyled">
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Professional Graphic Design with Freelancing</h6>
+                            </div>
+                        </li>
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Fundamental of Graphic Design</h6>
+                            </div>
+                        </li>
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Web Design & Development</h6>
+                            </div>
+                        </li>
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Professional Digital Marketing</h6>
+                            </div>
+                        </li>
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Social Media Marketing</h6>
+                            </div>
+                        </li>
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Office Course</h6>
+                            </div>
+                        </li>
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Office Advanced Course</h6>
+                            </div>
+                        </li>
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Diploma in Office Management & Graphics Design</h6>
+                            </div>
+                        </li>
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Diploma in Computer Science</h6>
+                            </div>
+                        </li>
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Higher Diploma in Computer Science</h6>
+                            </div>
+                        </li>
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">AutoCAD 2D | 3D | 3D MAX</h6>
+                            </div>
+                        </li>
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Cinematic Video Editing</h6>
+                            </div>
+                        </li>
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Motion Graphics</h6>
+                            </div>
+                        </li>
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Character Animation</h6>
+                            </div>
+                        </li>
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">ERP9 (Tally)</h6>
+                            </div>
+                        </li>
+                    </ul>
+                    </p>
+                    <div class="nyttc-go-corner">
+                        <div class="nyttc-go-arrow">→</div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 nyttc-card">
+                    <p class="nyttc-card-title">Technical Skill Department</p>
+                    <ul class="list-unstyled">
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Computer Hardware Engineering & Networking</h6>
+                            </div>
+                        </li>
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Diploma in Mobile Servicing</h6>
+                            </div>
+                        </li>
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Television Servicing</h6>
+                            </div>
+                        </li>
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Diploma in Fridge & Aircondition</h6>
+                            </div>
+                        </li>
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Diploma in Electrical Wiring</h6>
+                            </div>
+                        </li>
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Diploma in Plumbing & Sanitary</h6>
+                            </div>
+                        </li>
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Diploma in Welding</h6>
+                            </div>
+                        </li>
+                    </ul>
+                    <p class="nyttc-card-title">Language Skill Department</p>
+                    <ul class="list-unstyled">
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Shorthand Training</h6>
+                            </div>
+                        </li>
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Spoken English</h6>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="nyttc-go-corner">
+                        <div class="nyttc-go-arrow">→</div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 nyttc-card">
+                    <p class="nyttc-card-title">Master Chef Department</p>
+                    <ul class="list-unstyled">
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Diploma in Master Chef Course</h6>
+                            </div>
+                        </li>
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Diploma In Food & Beverage</h6>
+                            </div>
+                        </li>
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Mastery In Fastfood</h6>
+                            </div>
+                        </li>
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Mastery In Pastry & Bakery</h6>
+                            </div>
+                        </li>
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Mastery In Frozen Food</h6>
+                            </div>
+                        </li>
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Mastery In Desert</h6>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="nyttc-go-corner">
+                        <div class="nyttc-go-arrow">→</div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 nyttc-card">
+                    <p class="nyttc-card-title">Women's Development</p>
+                    <ul class="list-unstyled">
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Beauty Parlour Training</h6>
+                            </div>
+                        </li>
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Diploma in Fashion Design</h6>
+                            </div>
+                        </li>
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Sewing & Cutting</h6>
+                            </div>
+                        </li>
+                        <li class="m-2">
+                            <div style="border-bottom: 2px solid #44E8DF;">
+                                <h6 style="color: #44E8DF;">Block & Batik Print</h6>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="nyttc-go-corner">
+                        <div class="nyttc-go-arrow">→</div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
 
